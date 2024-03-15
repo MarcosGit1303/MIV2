@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reproducir Sonido</title>
+</head>
+<body>
+
+<audio id="miAudio">
+  <source src="miSonido.mp3" type="audio/mpeg">
+  Tu navegador no soporta el elemento de audio.
+</audio>
+
+<button onclick="reproducirSonido()">Reproducir Sonido</button>
+
+<script>
+function reproducirSonido() {
+  var audio = document.getElementById("miAudio");
+  audio.play();
+}
+</script>
+
+</body>
+</html>
