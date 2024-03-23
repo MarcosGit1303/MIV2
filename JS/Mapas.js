@@ -10,13 +10,16 @@ if (Posicion == 'Inicio') {
 var Mapa = urlParams.get('Mapa');
 switch (Mapa) {
   case 'EnProceso':
-    var imageUrl = 'imagenes/ENPROCESO.png';
+    var MapaPrincipal = 'imagenes/ENPROCESO.png';
+    var MapaSecundario = 'imagenes/ENPROCESO.png';
     break;
   case 'Fronteras':
-    var imageUrl = 'imagenes/Mapas/Fronteras.png';
+    var MapaPrincipal = 'imagenes/Mapas/Fronteras.png';
+    var MapaSecundario = 'imagenes/Mapas/Detalles.png';
     break;
   default:
-    var imageUrl = 'imagenes/Mapas/Reinos.png';
+    var MapaPrincipal = 'imagenes/Mapas/Reinos.png';
+    var MapaSecundario = 'imagenes/Mapas/Detalles.png';
     break;
 }
 
@@ -26,11 +29,11 @@ var viewer = OpenSeadragon({
   tileSources: [
     {
       type: 'image',
-      url: posicionUrl + imageUrl,
+      url: posicionUrl + MapaSecundario,
     },
     {
       type: 'image',
-      url: posicionUrl + imageUrl,
+      url: posicionUrl + MapaPrincipal,
     }
   ],
   minZoomLevel: 1,
