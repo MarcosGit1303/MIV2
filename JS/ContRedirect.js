@@ -17,6 +17,15 @@ document.addEventListener('DOMContentLoaded', function () {
     case 'Farrelann':
       ContFarrelann();
       break;
+    case 'CortamAram':
+      ContCortamAram();
+      break;
+    case 'DanzaEstrellas':
+      ContDanzaEstrellas();
+      break;
+    case 'TerminosAriende':
+      ContTerminosAriende();
+      break;
     default:
       break;
   }

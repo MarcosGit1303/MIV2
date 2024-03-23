@@ -59,19 +59,25 @@ function ContAriende() {
 
     //Generamos los botones
     var nav = document.getElementById("ContBotonesMapa");
+    var buttonTerminosAriende = document.createElement("button");
     var buttonFarrelann = document.createElement("button");
     var buttonSalir = document.createElement("button");
     //Nombres 
+    buttonTerminosAriende.textContent = "Terminos Ariende";
     buttonFarrelann.textContent = "Farrelann";
     buttonSalir.textContent = "Salir";
     //Enlaces
     buttonFarrelann.onclick = function () {
         window.location.href = "Secciones.html?Posicion=Secciones&Mapa=EnProceso&Seccion=Farrelann";
     };
+    buttonTerminosAriende.onclick = function () {
+        window.location.href = "Secciones.html?Posicion=Secciones&Mapa=EnProceso&Seccion=TerminosAriende";
+    };
     buttonSalir.onclick = function () {
         window.location.href = "../index.html";
     };
     //Los metemos
+    nav.appendChild(buttonTerminosAriende);
     nav.appendChild(buttonFarrelann);
     nav.appendChild(buttonSalir);
 };
@@ -85,6 +91,123 @@ function ContElian() {
     // Crear los elementos p y añadimos el texto a la section
     var paragraphs = [
         "Trabajando en ello",
+    ];
+    for (var i = 0; i < paragraphs.length; i++) {
+        var p = document.createElement("p");
+        p.textContent = paragraphs[i];
+        section.appendChild(p);
+    }
+
+    //Generamos los botones
+    var nav = document.getElementById("ContBotonesMapa");
+    var buttonSalir = document.createElement("button");
+    //Nombres 
+    buttonSalir.textContent = "Salir";
+    //Enlaces
+    buttonSalir.onclick = function () {
+        window.location.href = "../index.html";
+    };
+    //Los metemos
+    nav.appendChild(buttonSalir);
+};
+
+function ContCortamAram() {
+    //Creamos contenedor, añadimos h1 y contenido h1
+    var section = document.getElementById("ContenedorParrafos");
+    var h1 = document.createElement("h1");
+    h1.textContent = "Cortam Aram";
+    section.appendChild(h1);
+    // Crear los elementos p y añadimos el texto a la section
+    var paragraphs = [
+        "Cortan Aram es conocido en todo el mundo como el país de las playas. La costa de Cortan Aram está repleta de playas paradisíacas con arena dorada y un agua de color azul claro que resulta prácticamente transparente, la fauna y la flora apacibles, sin nada que pueda suponer un peligro grave. Además de sus famosas costas, al sur del país, no muy lejos de la costa se puede observar uno de los mayores fenómenos de la naturaleza, la Danza de Estrellas, una escena de lo más única y especial.",
+        "El turismo juega un papel importante en la economía de Cortan Aram, por lo que se destinan varios recursos a mantener las costas y playas limpias de residuos, además de preservar el ecosistema de la nación. No obstante, el mayor flujo de personas ocurre cuando se da una Danza de Estrellas, lo que ha hecho que se financien astilleros e ingenieros navales para diseñar embarcaciones con el suelo transparente y astrónomos para predecir con exactitud cuándo ocurrirá una Danza.",
+        "Aún así, tras algunos episodios de conflictos y epidemias, se determinó que no era posible depender únicamente del turismo, por lo que se construyeron varios puertos por los que ahora transcurren varias rutas comerciales importantes. Este comercio, junto a la pesca, logra hacer que Cortan Aram tenga una economía importante y sea un país con recursos.",
+        "La existencia de la Danza de las Estrellas y la cercanía con el océano ha hecho que Cortan Aram adopte una religión basada en ídolos marinos. No muy lejos del lugar donde ocurre la Danza de las Estrellas, está el Templo de Stella, ahora abandonado y usado solo como atracción turística, donde antaño se realizaban rituales de sacrificio, una práctica también en desuso. Pese a que estas creencias han sido consideradas por muchas otras naciones como paganas, la importación de productos de artesanía que, en ocasiones, guardan relación con estos ídolos marinos, es cada vez más importante en el país.",
+        "Hacía el interior, las playas dejan paso a un herbazal que ocupa todo el paisaje, con los ocasionales bosques reducidos de vegetación tropical, con flora de lo más colorida.",
+        "En el centro del país se encuentra la capital del país, un lugar bastante austero con una población que se dedica a tareas principalmente rurales en las granjas que existen alrededor de la capital. El resto de núcleos urbanos están no demasiado lejos de las playas, alrededor de los puertos y de algunos puntos turísticos.",
+        "Todo lo paradisíaco que rodea a Cortan Aram ha logrado que gente de todas partes haya querido ir en algún momento, las clases más pudientes son las que más tiempo pasan de turismo o las que han decidido mudarse a vivir a este reino. Por este motivo, en Cortan Aram se pueden encontrar humanos, tiflis, medianos, gnomos, elfos y tabasis.",
+        "Pero frente a las diferencias que pareciera, pueden existir entre los habitantes, existe una amabilidad y alegría común a todos ellos que les permite llevar un estilo de vida en el que valoran las cosas sencillas, donde aceptan a todo el mundo que quiera visitar el país. Los habitantes de Cortan Aram han inventado muchos de los entretenimientos y juegos que se conocen por el continente, desde juegos de cartas hasta deportes de contacto, además de una amplia variedad de fiestas regionales.",
+        "Toda esta mezcla de razas, junto con las diferentes religiones dentro del reino, han hecho que la cultura de Cortan Aram sea única entre todas, que atrae por igual a miembros de todas las razas de cualquier reino."
+    ];
+    for (var i = 0; i < paragraphs.length; i++) {
+        var p = document.createElement("p");
+        p.textContent = paragraphs[i];
+        section.appendChild(p);
+    }
+
+    //Generamos los botones
+    var nav = document.getElementById("ContBotonesMapa");
+    var buttonDanzaEstrellas = document.createElement("button");
+    var buttonSalir = document.createElement("button");
+    //Nombres 
+    buttonDanzaEstrellas.textContent = "Danza de Estrellas";
+    buttonSalir.textContent = "Salir";
+    //Enlaces
+    buttonDanzaEstrellas.onclick = function () {
+        window.location.href = "Secciones.html?Posicion=Secciones&Mapa=EnProceso&Seccion=DanzaEstrellas";
+    };
+    buttonSalir.onclick = function () {
+        window.location.href = "../index.html";
+    };
+    //Los metemos
+    nav.appendChild(buttonDanzaEstrellas);
+    nav.appendChild(buttonSalir);
+};
+
+function ContDanzaEstrellas() {
+    //Creamos contenedor, añadimos h1 y contenido h1
+    var section = document.getElementById("ContenedorParrafos");
+    var h1 = document.createElement("h1");
+    h1.textContent = "Danza de Estrellas";
+    section.appendChild(h1);
+    // Crear los elementos p y añadimos el texto a la section
+    var paragraphs = [
+        "La Danza de Estrellas es un fenómeno de la naturaleza que existe desde que se descubrió por primera vez cuando comenzó la exploración por el océano. Este lugar al sur de Cortan Aram tiene una peculiaridad, las profundidades oceánicas están formadas por un doble fondo que se conecta con el fondo visible por unas cuevas.",
+        "Cuando Louksna se oculta detrás del anillo de asteroides, por estas cuevas emergen criaturas bioluminiscentes, que aprovechan la oscuridad total de la noche para cazar a las desprevenidas presas que no están preparadas para esa amenaza.",
+        "De esta manera, la Danza de Estrellas se ha convertido en un evento conocido internacionalmente que atrae a una gran cantidad de gente."
+    ];
+    for (var i = 0; i < paragraphs.length; i++) {
+        var p = document.createElement("p");
+        p.textContent = paragraphs[i];
+        section.appendChild(p);
+    }
+
+    //Generamos los botones
+    var nav = document.getElementById("ContBotonesMapa");
+    var buttonSalir = document.createElement("button");
+    //Nombres 
+    buttonSalir.textContent = "Salir";
+    //Enlaces
+    buttonSalir.onclick = function () {
+        window.location.href = "../index.html";
+    };
+    //Los metemos
+    nav.appendChild(buttonSalir);
+};
+
+function ContTerminosAriende() {
+    //Creamos contenedor, añadimos h1 y contenido h1
+    var section = document.getElementById("ContenedorParrafos");
+    var h1 = document.createElement("h1");
+    h1.textContent = "Ferroarcanos (Los magos del metal)";
+    section.appendChild(h1);
+    // Crear los elementos p y añadimos el texto a la section
+    var paragraphs = [
+        "Cuando a un joven aprendiz de mago, llamado Karenan Alás, se le ocurrió la idea de juntar lo arcano con la metalurgia, no sabía la importancia que tendría para la posteridad, su estatua enfrente de la sede de Fundiciones Karenan dejaba claro que la invención del ferroarcanismo marcó un antes y un después.",
+        "Los ferroarcanistas, también conocidos como magos del metal, poseen grandes conocimientos sobre el tratamiento del metal, habiendo llegado a desarrollar sus propios métodos y herramientas para poder desempeñar sus trabajos e ideas para la forja de armas con propiedades especiales. Estas herramientas poseen grabados rúnicos individuales, muchas veces para forjar un tipo de arma es necesario una herramienta con un grabado determinado y no se puede usar otro. Además, al no ser baratas de conseguir, pues hacen falta algunos de los mejores tejerunas del reino, su valor es incalculable, y suelen ser objetivo de espionaje industrial entre las diferentes compañías de la ciudad.",
+        "Es, por todos estos avances, por lo que la ciudad de Farrelann es un faro en el páramo de Ariende, una metrópolis famosa y conocida por sus creaciones."
+    ];
+    for (var i = 0; i < paragraphs.length; i++) {
+        var p = document.createElement("p");
+        p.textContent = paragraphs[i];
+        section.appendChild(p);
+    }
+
+    var h1 = document.createElement("h1");
+    h1.textContent = "Guardsens";
+    section.appendChild(h1);
+    var paragraphs = [
+        "Los Guardsens son como se conoce a todos aquellos mercenarios que son contratados principalmente por comerciantes y minoritariamente por turistas y nobles para que garanticen la seguridad de su paso por el reino. Aunque originalmente no tenían nombre, poco a poco, los rumores del éxito de los mercenarios de la ruta comercial de Ariende se extendieron por todo el reino, pues ofrecía un pago digno por un trabajo que resultaba sencillo para muchos de los mercenarios, ya que eran veteranos de guerra o diestros guerreros. Como en bastantes ocasiones los ladrones que intentaban asaltar las caravanas eran poco más que gente pobre que trataba de sobrevivir, bastaba con mostrase amenazador para disuadirlos de atacar."
     ];
     for (var i = 0; i < paragraphs.length; i++) {
         var p = document.createElement("p");
