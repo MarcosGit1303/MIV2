@@ -4,7 +4,7 @@ if (Posicion == 'Inicio') {
   var posicionUrl = '';
 } else if (Posicion == 'Secciones') {
   var posicionUrl = '../';
-} else{
+} else {
   var posicionUrl = '';
 }
 var Mapa = urlParams.get('Mapa');
@@ -16,6 +16,10 @@ switch (Mapa) {
   case 'Fronteras':
     var MapaPrincipal = 'imagenes/Mapas/Fronteras.png';
     var MapaSecundario = 'imagenes/Mapas/Detalles.png';
+    break;
+  case 'Ariende':
+    var MapaPrincipal = 'imagenes/Mapas/Ariende.jpg';
+    var MapaSecundario = 'imagenes/Mapas/Ariende.jpg';
     break;
   default:
     var MapaPrincipal = 'imagenes/Mapas/Reinos.png';
