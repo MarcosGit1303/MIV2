@@ -19,7 +19,7 @@ switch (Mapa) {
     break;
   case 'Ariende':
     var MapaPrincipal = 'imagenes/Mapas/Ariende.jpg';
-    var MapaSecundario = 'imagenes/Mapas/Ariende.jpg';
+    var MapaSecundario = 'imagenes/Mapas/AriendeZoom.jpg';
     break;
   default:
     var MapaPrincipal = 'imagenes/Mapas/Reinos.png';
@@ -43,7 +43,7 @@ var viewer = OpenSeadragon({
   minZoomLevel: 1,
   maxZoomLevel: 6,
   animationTime: 0.8,
-  zoomPerScroll: 1.5,
+  zoomPerScroll: 1.3,
 
 });
 
