@@ -15,11 +15,11 @@ switch (Mapa) {
     break;
   case 'Fronteras':
     var MapaPrincipal = 'imagenes/Mapas/Fronteras.png';
-    var MapaSecundario = 'imagenes/Mapas/Detalles.png';
+    var MapaSecundario = 'imagenes/Mapas/Detalles.z';
     break;
   case 'Ariende':
     var MapaPrincipal = 'imagenes/Mapas/Ariende.jpg';
-    var MapaSecundario = 'imagenes/Mapas/AriendeZoom.jpg';
+    var MapaSecundario = 'imagenes/Mapas/AriendeZoom.png';
     break;
   default:
     var MapaPrincipal = 'imagenes/Mapas/Reinos.png';
