@@ -15,38 +15,6 @@ body {
     background-size: cover;
 }
 
-article{
-    /*Distribucion*/
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-section{
-    /*Distribucion*/
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav{
-    /*Distribucion*/
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-footer{
-    /*Distribucion*/
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
 /* general */
 p {
     font-size: 1.3vw;
