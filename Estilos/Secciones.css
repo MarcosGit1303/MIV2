@@ -1,6 +1,10 @@
-article {
-    /* Posicion Parrafos */
+.lateral{
+    /*Distribucion*/
+    display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /*Forma*/
     height: 100vh;
     width: 45vw;
     /*Fondo*/
@@ -10,36 +14,65 @@ article {
     color: white;
 }
 
-section {
+.ContenedorParrafos{
+    /*Distribucion*/
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     overflow: auto;
+    /*Forma*/
     padding: 5vw;
     height: 70vh;
 }
 
-footer {
-    /* Especiales */
-    overflow-y: scroll;
-    height: 100vh;
-    width: 55vw;
-}
-
-nav {
+.ContBotonesMapa{
+    /*Distribucion*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /*Forma*/
     height: 20vh;
     width: 55vw;
 }
 
-div {
+.central{
+    /*Distribucion*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /*Forma*/
+    height: 100vh;
+    width: 55vw;
+    /* Especiales */
+    overflow-y: scroll;
+}
+
+.Mapa {
+    /*Distribucion*/
+    margin-top: 2vw;
+    overflow: hidden;
+    /*Forma*/
     border: 0.4vw solid rgb(191, 93, 2);
     border-radius: 1.8vw;
-    margin-top: 2vw;
+    height: 65vh;
+    width: 45vw;
     /*Fondo*/
     background-image: url('../imagenes/Fondos/D&D.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.Mapa {
-    height: 65vh;
-    width: 45vw;
+.botonesExtra{
+    /*Distribucion*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /*Forma*/
+    height: 100vh;
+    width: 10vw;
+    background-image: url('../imagenes/Fondos/FONDOPRUEBA.png');
 }

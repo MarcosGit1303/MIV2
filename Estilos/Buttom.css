@@ -55,3 +55,11 @@ button:hover::after {
     height: 120%;
     background: linear-gradient(200deg in hsl shorter hue, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
 }
+
+.desactivado {
+    background-image: linear-gradient(to bottom right, rgb(111, 111, 111), rgb(0, 0, 0));
+}
+
+.activado {
+    background-image: linear-gradient(to bottom right, rgb(255, 210, 87), rgb(0, 0, 0));
+}
