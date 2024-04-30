@@ -13,6 +13,7 @@ switch (Mapa) {
     var MapaPrincipal = 'imagenes/Mapas/Ariende.jpg';
     var MapaSecundario = 'imagenes/Mapas/AriendeZoom.png';
     var MapaNombres = 'imagenes/Mapas/AriendeZoomNombres.png';
+    var MapaEscudos = 'imagenes/Mapas/AriendeZoomEscudos.png';
     break;
   default:
     var MapaPrincipal = 'imagenes/Mapas/Reinos.png';
@@ -35,6 +36,10 @@ var viewer = OpenSeadragon({
     {
       type: 'image',
       url: '../' + MapaNombres,
+    },
+    {
+      type: 'image',
+      url: '../' + MapaEscudos,
     }
   ],
   minZoomLevel: 1,
@@ -61,6 +66,7 @@ miContenedor.addEventListener("mouseover", function () {
 
 //
 var botonNombre = document.getElementById("botonNombre");
+var botonEscudo = document.getElementById("botonEscudo");
 intervalo = setInterval(visibilidadNombres, 50);
 
 //Boton Nombre activar desactivar
@@ -75,13 +81,31 @@ botonNombre.addEventListener("click", function () {
   }
 });
 
+//Boton Escudos activar desactivar
+botonEscudo.addEventListener("click", function () {
+  botonEscudo.clicked = !botonEscudo.clicked;
+  if (botonEscudo.clicked) {
+    botonEscudo.classList.remove("desactivado");
+    botonEscudo.classList.add("activado");
+  } else {
+    botonEscudo.classList.remove("activado");
+    botonEscudo.classList.add("desactivado");
+  }
+});
+
 // Función para controlar la visibilidad de la imagen adicional
 function visibilidadNombres() {
   var currentZoom = viewer.viewport.getZoom();
   var imagenNombres = viewer.world.getItemAt(2);
+  var imagenEscudos = viewer.world.getItemAt(3);
   if (currentZoom >= 2 && currentZoom <= 6 && botonNombre.clicked) {
     imagenNombres.setOpacity(1);
   } else {
     imagenNombres.setOpacity(0);
+  }
+  if (currentZoom >= 2 && currentZoom <= 6 && botonEscudo.clicked) {
+    imagenEscudos.setOpacity(1);
+  } else {
+    imagenEscudos.setOpacity(0);
   }
 }
