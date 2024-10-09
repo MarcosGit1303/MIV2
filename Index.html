@@ -21,11 +21,17 @@
 
 <body>
     <footer class="lateral">
-        <button onclick="window.location.href='Seciones/Secciones.html?Mapa=EnProceso&Seccion=Linothen'">Linothen</button>
-        <button onclick="window.location.href='Seciones/Secciones.html?Mapa=Ariende&Seccion=Ariende'">Ariende</button>
-        <button onclick="window.location.href='Seciones/Secciones.html?Mapa=EnProceso&Seccion=Elian'">Elian</button>
-        <button onclick="window.location.href='Seciones/Secciones.html?Mapa=EnProceso&Seccion=CortamAram'">Cortam Aram</button>
+        <div class="custom-select">
+            <select id="reinos-dropdown" onchange="location = this.value;">
+                <option value="" selected>Reinos</option>
+                <option value="Seciones/Secciones.html?Mapa=EnProceso&Seccion=Linothen">Linothen</option>
+                <option value="Seciones/Secciones.html?Mapa=Ariende&Seccion=Ariende">Ariende</option>
+                <option value="Seciones/Secciones.html?Mapa=EnProceso&Seccion=Elian">Elian</option>
+                <option value="Seciones/Secciones.html?Mapa=EnProceso&Seccion=CortamAram">Cortam Aram</option>
+            </select>
+        </div>
     </footer>
+
     <article class="ContMapa">
         <div id="openseadragon" class="Mapa">
         </div>
@@ -36,11 +42,15 @@
             <button onclick="window.location.href='index.html?Mapa=EnProceso'">Geografia</button>
         </nav>
     </article>
+
     <footer class="lateral">
-        <button onclick="window.location.href='Articulos/Articulos.html?Mapa=EnProceso&Seccion=HistoriaOrte'">Historia Orte</button>
-        <button onclick="window.location.href='Articulos/Articulos.html?Mapa=EnProceso&Seccion=CambiosFrenteDyD'">Cambios Frente D&D</button>
-        <button onclick="window.location.href='Articulos/Articulos.html?Mapa=EnProceso&Seccion=ConocimientoPopular'">Conocimiento Popular</button>
+        <button onclick="window.location.href='Seciones/Secciones.html?Mapa=EnProceso&Seccion=HistoriaOrte'">Historia Orte</button>
+        <button onclick="window.location.href='Seciones/Secciones.html?Mapa=EnProceso&Seccion=CambiosFrenteDyD'">Cambios Frente D&D</button>
+        <button onclick="window.location.href='Seciones/Secciones.html?Mapa=Fronteras&Seccion=RazasOrte'">Razas Orte</button>
+        <button onclick="window.location.href='Seciones/Secciones.html?Mapa=EnProceso&Seccion=ConocimientoPopular'">Conocimiento Popular</button>
     </footer>
+
+
     <script src="JS/MapasInicio.js"></script>
 </body>
 
