@@ -4,10 +4,14 @@ switch (Mapa) {
   case 'EnProceso':
     var MapaPrincipal = 'imagenes/ENPROCESO.png';
     var MapaSecundario = 'imagenes/ENPROCESO.png';
+    var MapaNombres = 'imagenes/Mapas/AriendeZoomNombres.png';
+    var MapaEscudos = 'imagenes/Mapas/AriendeZoomEscudos.png';
     break;
   case 'Fronteras':
     var MapaPrincipal = 'imagenes/Mapas/Fronteras.png';
     var MapaSecundario = 'imagenes/Mapas/Detalles.png';
+    var MapaNombres = 'imagenes/Mapas/AriendeZoomNombres.png';
+    var MapaEscudos = 'imagenes/Mapas/AriendeZoomEscudos.png';
     break;
   case 'Ariende':
     var MapaPrincipal = 'imagenes/Mapas/Ariende.jpg';
@@ -18,6 +22,8 @@ switch (Mapa) {
   default:
     var MapaPrincipal = 'imagenes/Mapas/Reinos.png';
     var MapaSecundario = 'imagenes/Mapas/Detalles.png';
+    var MapaNombres = 'imagenes/Mapas/AriendeZoomNombres.png';
+    var MapaEscudos = 'imagenes/Mapas/AriendeZoomEscudos.png';
     break;
 }
 
