@@ -5,8 +5,9 @@
     justify-content: space-evenly;
     align-items: center;
     /*Forma*/
+    padding-left: 4vw;
     height: 100vh;
-    width: 45vw;
+    width: 42vw;
     /*Fondo*/
     background-image: url('../imagenes/Fondos/D&D.png');
     background-repeat: no-repeat;
@@ -74,5 +75,5 @@
     /*Forma*/
     height: 100vh;
     width: 10vw;
-    background-image: url('../imagenes/Fondos/FONDOPRUEBA.png');
+    background-image: url('../imagenes/Fondos/FondoLateral.png');
 }

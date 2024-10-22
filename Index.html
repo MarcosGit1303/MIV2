@@ -17,41 +17,65 @@
     <link rel="stylesheet" href="Estilos/Generico.css">
     <link rel="stylesheet" href="Estilos/Buttom.css">
     <link rel="stylesheet" href="Estilos/Inicio.css">
+    <link rel="stylesheet" href="Estilos/Nav.css">
 </head>
 
 <body>
-    <footer class="lateral">
-        <div class="custom-select">
-            <select id="reinos-dropdown" onchange="location = this.value;">
-                <option value="" selected>Reinos</option>
-                <option value="Seciones/Secciones.html?Mapa=EnProceso&Seccion=Linothen">Linothen</option>
-                <option value="Seciones/Secciones.html?Mapa=Ariende&Seccion=Ariende">Ariende</option>
-                <option value="Seciones/Secciones.html?Mapa=EnProceso&Seccion=Elian">Elian</option>
-                <option value="Seciones/Secciones.html?Mapa=EnProceso&Seccion=CortamAram">Cortam Aram</option>
-            </select>
-        </div>
-    </footer>
 
-    <article class="ContMapa">
-        <div id="openseadragon" class="Mapa">
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="Seciones/Secciones.html?Mapa=EnProceso&Seccion=Linothen" class="titulo-central">
+                    <h1 class="titulo">Reinos</h1>
+                    <span class="nav-text">Linothen</span>
+                </a>
+            </li>
+            <li>
+                <a href="Seciones/Secciones.html?Mapa=Ariende&Seccion=Ariende">
+                    <i class="titulo"></i>
+                    <span class="nav-text">Ariende</span>
+                </a>
+            </li>
+            <li>
+                <a href="Seciones/Secciones.html?Mapa=EnProceso&Seccion=Elian">
+                    <i class="titulo"></i>
+                    <span class="nav-text">Elian</span>
+                </a>
+            </li>
+            <li>
+                <a href="Seciones/Secciones.html?Mapa=EnProceso&Seccion=CortamAram">
+                    <i class="titulo"></i>
+                    <span class="nav-text">Cortam Aram</span>
+                </a>
+            </li>
+            <li>
+                <a href="Seciones/Secciones.html?Mapa=EnProceso&Seccion=HistoriaOrte" class="titulo-central">
+                    <h1 class="titulo">Orte</h1>
+                    <span class="nav-text">Historia</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="map"></div>
+    <article class="">
+        <div id="openseadragon" class="Mapa"></div>
         </div>
-        <!-- Botones Continente -->
-        <nav class="navegador">
-            <button onclick="window.location.href='index.html?'">Reinos</button>
-            <button onclick="window.location.href='index.html?Mapa=Fronteras'">Fronteras</button>
-            <button onclick="window.location.href='index.html?Mapa=EnProceso'">Geografia</button>
-        </nav>
     </article>
 
     <footer class="lateral">
-        <button onclick="window.location.href='Seciones/Secciones.html?Mapa=EnProceso&Seccion=HistoriaOrte'">Historia Orte</button>
+        <button onclick="window.location.href='index.html?'">Reinos</button>
+        <button onclick="window.location.href='index.html?Mapa=Fronteras'">Fronteras</button>
+        <button onclick="window.location.href='index.html?Mapa=EnProceso'">Geografia</button>
+        <!-- <button onclick="window.location.href='Seciones/Secciones.html?Mapa=EnProceso&Seccion=HistoriaOrte'">Historia Orte</button>
         <button onclick="window.location.href='Seciones/Secciones.html?Mapa=EnProceso&Seccion=CambiosFrenteDyD'">Cambios Frente D&D</button>
         <button onclick="window.location.href='Seciones/Secciones.html?Mapa=Fronteras&Seccion=RazasOrte'">Razas Orte</button>
-        <button onclick="window.location.href='Seciones/Secciones.html?Mapa=EnProceso&Seccion=ConocimientoPopular'">Conocimiento Popular</button>
+        <button onclick="window.location.href='Seciones/Secciones.html?Mapa=EnProceso&Seccion=ConocimientoPopular'">Conocimiento Popular</button> -->
     </footer>
 
 
     <script src="JS/MapasInicio.js"></script>
+    <script src="JS/Pruebas.js"></script>
 </body>
 
 </html>
