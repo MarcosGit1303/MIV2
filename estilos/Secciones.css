@@ -1,0 +1,79 @@
+.lateral{
+    /*Distribucion*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /*Forma*/
+    padding-left: 4vw;
+    height: 100vh;
+    width: 42vw;
+    /*Fondo*/
+    background-image: url('../imagenes/fondos/D&D.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.ContenedorParrafos{
+    /*Distribucion*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: auto;
+    /*Forma*/
+    padding: 5vw;
+    height: 70vh;
+}
+
+.ContBotonesMapa{
+    /*Distribucion*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /*Forma*/
+    height: 20vh;
+    width: 55vw;
+}
+
+.central{
+    /*Distribucion*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /*Forma*/
+    height: 100vh;
+    width: 55vw;
+    /* Especiales */
+    overflow-y: scroll;
+}
+
+.Mapa {
+    /*Distribucion*/
+    margin-top: 2vw;
+    overflow: hidden;
+    /*Forma*/
+    border: 0.4vw solid rgb(191, 93, 2);
+    border-radius: 1.8vw;
+    height: 65vh;
+    width: 45vw;
+    /*Fondo*/
+    background-image: url('../imagenes/fondos/D&D.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.botonesExtra{
+    /*Distribucion*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /*Forma*/
+    height: 100vh;
+    width: 10vw;
+    background-image: url('../imagenes/fondos/FondoLateral.png');
+}

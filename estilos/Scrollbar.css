@@ -1,0 +1,18 @@
+/* Fondo del scrollbar (track) */
+.scrollbar::-webkit-scrollbar-track {
+    background-color: #FFE5B4; /* Un naranja muy claro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: inset 0 0 10px rgba(255, 165, 0, 0.5); /* Sombra interior anaranjada */
+}
+
+/* Tamaño del scrollbar */
+.scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Thumb (la parte que se arrastra) */
+.scrollbar::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #FFA500, #FF8C00); /* Degradado anaranjado */
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra para hacerla más visible */
+}
