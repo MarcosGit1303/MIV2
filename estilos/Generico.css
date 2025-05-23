@@ -1,0 +1,48 @@
+/* Borrar barras laterales */
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    /*Distribucion*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0vw;
+    /*Fondo*/
+    background-image: url('../imagenes/fondos/Mapa.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* general */
+p {
+    font-size: 1.3vw;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 2vw;
+    font-family: 'DragonHunter', sans-serif;
+}
+
+h2 {
+    font-size: 1.9vw;
+    font-family: 'Pristina', sans-serif;
+}
+
+a {
+    opacity: 100%;
+    position: absolute;
+}
+
+/*Fuente*/
+@font-face {
+    font-family: 'DragonHunter';
+    src: url('../Fuentes/Brightness.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Pristina';
+    src: url('../Fuentes/PRISTINA.woff') format('opentype');
+}

@@ -1,0 +1,37 @@
+.lateral{
+    /*Distribucion*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /*Forma*/
+    height: 100vh;
+    width: 10vw;
+    background-image: url('../imagenes/fondos/FondoLateral.png');
+}
+
+.navegador {
+    /*Distribucion*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /*Forma*/
+    height: 20vh;
+    width: 70vw;
+}
+
+.Mapa {
+    /*Distribucion*/
+    margin-top: 1vw;
+    overflow: hidden;
+    /*Forma*/
+    border: 0.4vw solid rgb(191, 93, 2);
+    border-radius: 1.8vw;
+    /*Fondo*/
+    background-image: url('../imagenes/fondos/D&D.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 93vh;
+    width: 65vw;
+}
