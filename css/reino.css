@@ -1,0 +1,84 @@
+/* ///////////////////////////////////////////////////////// */
+/* =========================Container========================= */
+/* ///////////////////////////////////////////////////////// */
+.reino-container {
+    /* FLEX */
+    display: flex;
+    justify-content: space-between;
+
+    /* TAMAÑO */
+    height: 100vh;
+
+    /* FORMATO */
+    overflow: hidden;
+    
+    /* FONDO */
+    background-image: url("../imagenes/fondos/Mapa.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ///////////////////////////////////////////////////////// */
+/* =========================Container-reino========================= */
+/* ///////////////////////////////////////////////////////// */
+#contenido {
+    /* FLEX */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    /* TAMAÑO */
+    height: 80%;
+    width: 36vw;
+
+    /* FORMATO */
+    overflow-y: auto;
+    font-size: 1.2vw;
+    line-height: 1.6;
+
+    background-image: url(../imagenes/fondos/D&D.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    padding-left: 7vw;
+    padding-right: 6vw;
+
+}
+/* ///////////////////////////////////////////////////////// */
+/* =========================Container-mapa========================= */
+/* ///////////////////////////////////////////////////////// */
+#container-mapa {
+    /* FLEX */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* TAMAÑO */
+    height: 100vh;
+    width: 70vw;
+
+    /* FORMATO */
+    overflow: hidden;
+    
+}
+/* ///////////////////////////////////////////////////////// */
+/* =========================Mapa-reino========================= */
+/* ///////////////////////////////////////////////////////// */
+#mapa {
+    /* FORMA */
+    height: 69%;
+    width: 82%;
+    border: 5px solid #853e00;
+    border-radius: 20px;
+    /* FORMATO */
+    overflow: hidden;
+    position: relative;
+    cursor: grab;
+    /* FONDO */
+    background-color: rgb(79, 32, 32);
+}

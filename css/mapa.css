@@ -1,0 +1,139 @@
+/* ///////////////////////////////////////////////////////// */
+/* =========================BASE========================= */
+/* ///////////////////////////////////////////////////////// */
+/* BASE */
+#container {
+  /* TAMAÑO */
+  height: 100%;
+  width: 100%;
+  /* FORMATO */
+  display: flex;
+  overflow: hidden;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  /* FONDO */
+  background-image: url("../imagenes/fondos/Mapa.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#mapa {
+  /* FORMA */
+  height: 85%;
+  width: 59%;
+  border: 5px solid #853e00;
+  border-radius: 20px;
+  /* FORMATO */
+  flex: none;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+  /* FONDO */
+  background-color: rgb(79, 32, 32);
+}
+
+/* ///////////////////////////////////////////////////////// */
+/* =========================CAPAS MAPA========================= */
+/* ///////////////////////////////////////////////////////// */
+
+#mapImage,
+#pinLayer {
+  /* FORMA */
+  height: 100%;
+  width: 100%;
+  /* FORMATO */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* ///////////////////////////////////////////////////////// */
+/* =========================PIN========================= */
+/* ///////////////////////////////////////////////////////// */
+.pin {
+  /* FORMA */
+  width: 80px;
+  height: 70px;
+  /* FORMATO */
+  position: absolute;
+  /* FONDO */
+  background-color: tomato;
+  /* OTROS */
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  opacity: 20%;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+
+  /* FORMA DEL BORDE */
+  mask-image: url("../imagenes/pin/FondosPin.png");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  mask-position: center;
+
+  border-width: 50px;
+  border-style: solid;
+  border-color: transparent;
+  border-image: url('../imagenes/pin/FondosPin.png') 0 0 round;
+}
+
+.pin:hover {
+  opacity: 80%;
+}
+
+/* =========================PIN FORMATO REINOS========================= */
+
+#Linothen {
+  mask-image: url("../imagenes/pin/PinLinothen.png");
+  border-image: url('../imagenes/pin/PinLinothen.png') 0 0 round;
+  top: 36%;
+  left: 65.5%;
+  border-width: 12.4vh;
+  background-color: rgb(179, 0, 0);
+}
+
+#Ariende {
+  mask-image: url("../imagenes/pin/PinAriende.png");
+  border-image: url('../imagenes/pin/PinAriende.png') 0 0 round;
+  top: 57.5%;
+  left: 67%;
+  border-width: 9.7vh;
+  background-color: rgb(237, 133, 14);
+}
+
+#Elion {
+  mask-image: url("../imagenes/pin/PinElion.png");
+  border-image: url('../imagenes/pin/PinElion.png') 0 0 round;
+  top: 45.7%;
+  left: 69%;
+  border-width: 10.5vh;
+  background-color: rgb(64, 117, 10);
+}
+
+#Elian {
+  mask-image: url("../imagenes/pin/PinElian.png");
+  border-image: url('../imagenes/pin/PinElian.png') 0 0 round;
+  top: 62.7%;
+  left: 53.2%;
+  border-width: 12.5vh;
+  background-color: rgb(132, 195, 70);
+}
+
+#Ronte {
+  mask-image: url("../imagenes/pin/PinRonte.png");
+  border-image: url('../imagenes/pin/PinRonte.png') 0 0 round;
+  top: 38.5%;
+  left: 57.5%;
+  border-width: 7vh;
+  background-color: rgb(255, 252, 54);
+}
+
+#CortamAram {
+  mask-image: url("../imagenes/pin/PinCortamAram.png");
+  border-image: url('../imagenes/pin/PinCortamAram.png') 0 0 round;
+  top: 76.8%;
+  left: 80.5%;
+  border-width: 9.5vh;
+  background-color: rgb(163, 180, 5);
+}

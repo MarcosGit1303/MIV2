@@ -1,73 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Mapa</title>
-    <!-- Agrega el ícono de la pestaña del navegador -->
-    <link rel="icon" href="imagenes/fondos/D&DLOGO.png" type="image/png">
-
-    <!-- openseadragon -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js"></script>
-
-    <!-- Estilos -->
-    <link rel="stylesheet" href="estilos/Generico.css">
-    <link rel="stylesheet" href="estilos/Buttom.css">
-    <link rel="stylesheet" href="estilos/Inicio.css">
-    <link rel="stylesheet" href="estilos/Nav.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa Interactivo - D&D</title>
+  <link rel="icon" href="imagenes/fondos/D&DLOGO.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mapa.css">
 </head>
 
 <body>
+  <!-- Sidebar -->
+  <aside id="sidebar-L">
+    <div class="sidebar-tab" aria-label="Abrir menú">📜</div>
+    <nav>
+      <ul>
+        <li><a href="reinos/reinos.html?nombre=linothen">Linothen</a></li>
+        <li><a href="reinos/reinos.html?nombre=ariende">Ariende</a></li>
+        <li><a href="reinos/reinos.html?nombre=cortam-aram">Cortam Aram</a></li>
+        <li><a href="reinos/reinos.html?nombre=elion">Elion</a></li>
+        <li><a href="reinos/reinos.html?nombre=elian">Elion</a></li>
+        <li><a href="reinos/reinos.html?nombre=ronte">Ronte</a></li>
+      </ul>
+    </nav>
+  </aside>
 
-    <div class="menu">
-        <ul>
-            <li>
-                <a href="seciones/Secciones.html?Mapa=EnProceso&Seccion=Linothen" class="titulo-central">
-                    <h1 class="titulo">Reinos</h1>
-                    <span class="nav-text">Linothen</span>
-                </a>
-            </li>
-            <li>
-                <a href="seciones/Secciones.html?Mapa=Ariende&Seccion=Ariende">
-                    <i class="titulo"></i>
-                    <span class="nav-text">Ariende</span>
-                </a>
-            </li>
-            <li>
-                <a href="seciones/Secciones.html?Mapa=EnProceso&Seccion=Elian">
-                    <i class="titulo"></i>
-                    <span class="nav-text">Elian</span>
-                </a>
-            </li>
-            <li>
-                <a href="seciones/Secciones.html?Mapa=EnProceso&Seccion=CortamAram">
-                    <i class="titulo"></i>
-                    <span class="nav-text">Cortam Aram</span>
-                </a>
-            </li>
-            <li>
-                <a href="seciones/Secciones.html?Mapa=EnProceso&Seccion=HistoriaOrte" class="titulo-central">
-                    <h1 class="titulo">Orte</h1>
-                    <span class="nav-text">Historia</span>
-                </a>
-            </li>
-        </ul>
-    </div>
+  <!-- Contenedor principal -->
+  <div id="container">
+    <main id="mapa">
+      <img id="mapImage" src="imagenes/mapas/Reinos.png" alt="Mapa de los reinos de D&D">
+      <div id="pinLayer">
+        <a href="reinos/reinos.html?nombre=linothen" class="pin" data-title="Linothen" id="Linothen"></a>
+        <a href="reinos/reinos.html?nombre=ariende" class="pin" data-title="Ariende" id="Ariende"></a>
+        <a href="reinos/reinos.html?nombre=cortam-aram" class="pin" data-title="Cortam Aram" id="CortamAram"></a>
+        <!-- <a href="reinos/reinos.html?nombre=elion" class="pin" data-title="Elion" id="Elion"></a> -->
+        <a href="reinos/reinos.html?nombre=elian" class="pin" data-title="Elian" id="Elian"></a>
+        <a href="reinos/reinos.html?nombre=ronte" class="pin" data-title="Ronte" id="Ronte"></a>
+      </div>
+    </main>
+    <nav id="buttons">
+      <button id="cambiarMapa">Fronteras</button>
+    </nav>
+  </div>
 
-    <div id="map"></div>
-    <article class="">
-        <div id="openseadragon" class="Mapa"></div>
-    </article>
+  <!-- Sidebar -->
+  <aside id="sidebar-R">
+    <div class="sidebar-tab">📜</div>
+    <ul>
+      <li><button onclick="window.location.href='reinos/info.html?nombre=orte'"> Historia Orte</button></li>
+      <li><button onclick="window.location.href='reinos/info.html?nombre=religion'"> Religion</button></li>
+      <li><button onclick="window.location.href='reinos/info.html?nombre=ciencia'"> Ciencia</button></li>
+    </ul>
+  </aside>
 
-    <footer class="lateral">
-        <button onclick="window.location.href='index.html?'">Reinos</button>
-        <button onclick="window.location.href='index.html?Mapa=Fronteras'">Fronteras</button>
-        <button onclick="window.location.href='index.html?Mapa=EnProceso'">Geografia</button>
-    </footer>
-    <script src="js/MapasInicio.js"></script>
+  <!-- Tooltip -->
+  <div id="tooltip" role="tooltip"></div>
+
+  <script src="js/script.js" defer></script>
+  <script src="js/prueba.js" defer></script>
 </body>
 
 </html>
