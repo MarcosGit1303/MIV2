@@ -1,0 +1,231 @@
+/* ///////////////////////////////////////////////////////// */
+/* =========================GENERICO========================= */
+/* ///////////////////////////////////////////////////////// */
+body {
+  /* TAMAÑO */
+  margin: 0;
+  height: 100vh;
+  /* FORMATO */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ///////////////////////////////////////////////////////// */
+/* =========================PARRAFOS========================= */
+/* ///////////////////////////////////////////////////////// */
+p {
+  /* FORMATO */
+  /* font-size: 1.5vw; */
+  line-height: 1.2;
+  text-align: justify;
+  font-family: Times New Roman, serif;
+  text-align: justify;
+  /* OTROS */
+  color: #f5f5f5;
+}
+
+li {
+  font-size: 1.2vw;
+  font-family: Times New Roman, serif;
+}
+
+h1 {
+  /* formato */
+  font-size: 2vw;
+  font-family: 'DragonHunter', sans-serif;
+}
+
+h2 {
+  /* formato */
+  font-size: 1.9vw;
+  font-family: 'Pristina', sans-serif;
+}
+
+/* ///////////////////////////////////////////////////////// */
+/* =========================BUTTOMS========================= */
+/* ///////////////////////////////////////////////////////// */
+button {
+  /* FORMA */
+  height: 8vh;
+  width: 8vw;
+  font-family: Times New Roman, serif;
+  font-size: 1vw;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 0.1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom right, rgb(196, 0, 0), rgb(198, 171, 16));
+  transition: 0.2s;
+}
+
+aside button {
+  /* FORMA */
+  height: 6vh;
+  width: 6vw;
+  background-image: linear-gradient(to bottom right, rgb(103, 78, 13), rgb(42, 42, 42));
+  border-radius: 0.7rem;
+}
+
+button::before,
+button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 60%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%);
+  background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
+  transition: 0.2s;
+}
+
+button:hover::before {
+  width: 80%;
+  height: 80%;
+  transition: 0.2s;
+}
+
+button:hover::after {
+  width: 120%;
+  height: 120%;
+  background: linear-gradient(200deg in hsl shorter hue, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+}
+
+/* ///////////////////////////////////////////////////////// */
+/* =========================SIDEBAR-L========================= */
+/* ///////////////////////////////////////////////////////// */
+#sidebar-L {
+  position: fixed;
+  top: 0;
+  left: -180px;
+  /* oculto excepto pestaña */
+  width: 220px;
+  height: 100%;
+  padding-top: 60px;
+  background-image: url("../imagenes/fondos/Lateralizquierdo.png");
+  border-right: 5px solid #853e00;
+  transition: left 0.3s ease;
+  z-index: 200;
+}
+
+#sidebar-L:hover {
+  left: 0;
+}
+
+#sidebar-L .sidebar-tab {
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  width: 28px;
+  height: 60px;
+  background: #853e00;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+  border: 5px solid #853e00;
+}
+
+#sidebar-L ul {
+  list-style: none;
+  padding: 0 15px;
+}
+
+#sidebar-L ul li {
+  margin: 15px 0;
+}
+
+#sidebar-L ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+#sidebar-L ul li a:hover {
+  color: #4f46e5;
+}
+
+/* ///////////////////////////////////////////////////////// */
+/* =========================SIDEBAR-R========================= */
+/* ///////////////////////////////////////////////////////// */
+
+#sidebar-R {
+  position: fixed;
+  top: 0;
+  right: -230px;
+  /* oculto excepto pestaña */
+  width: 220px;
+  height: 100%;
+  background-image: url("../imagenes/fondos/Lateralizquierdo.png");
+  border-left: 5px solid #853e00;
+  transition: right 0.3s ease;
+  z-index: 200;
+  padding-top: 60px;
+  padding-left: 40px;
+}
+
+#sidebar-R:hover {
+  right: 0;
+}
+
+#sidebar-R .sidebar-tab {
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  width: 28px;
+  height: 60px;
+  background: #853e00;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  cursor: pointer;
+}
+
+#sidebar-R ul {
+  list-style: none;
+  padding: 0 15px;
+}
+
+#sidebar-R ul li {
+  margin: 15px 0;
+}
+
+#sidebar-R ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+#sidebar-R ul li a:hover {
+  color: #4f46e5;
+}
+
+/* ///////////////////////////////////////////////////////// */
+/* =========================Tooltip========================= */
+/* ///////////////////////////////////////////////////////// */
+#tooltip {
+  display: none;
+  position: absolute;
+  background: #222;
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  pointer-events: none;
+  z-index: 1000;
+}
