@@ -9,3 +9,57 @@ btnEscudos.addEventListener("click", () => {
         escudosOverlay.style.opacity = "0";  // transparente
     }
 });
+
+
+/* ///////////////////////////////////////////////////////// */
+/* =========================MAPA REINO====================== */
+/* ///////////////////////////////////////////////////////// */
+
+// ===================
+// Zoom con la rueda
+// ===================
+mapa.addEventListener("wheel", (e) => {
+  e.preventDefault();
+  const zoomSpeed = 0.1;
+  if (e.deltaY < 0) {
+    scale = Math.min(scale + zoomSpeed, 4); // máximo x4
+  } else {
+    scale = Math.max(scale - zoomSpeed, 1); // mínimo x1
+  }
+  actualizarMapa();
+});
+
+// ===================
+// Arrastrar con el ratón
+// ===================
+mapa.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  startX = e.clientX - posX;
+  startY = e.clientY - posY;
+});
+
+window.addEventListener("mouseup", () => {
+  isDragging = false;
+});
+
+window.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+  posX = e.clientX - startX;
+  posY = e.clientY - startY;
+  actualizarMapa();
+});
+
+// ===================
+// Función que actualiza
+// ===================
+function actualizarMapa() {
+  mapImage.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
+  pinLayer.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
+
+  // Cambiar imagen según el zoom
+  if (scale >= 1.8) {
+    mapImage.src = "../imagenes/mapas/Ariende/AriendeZoom.jpg";
+  } else {
+    mapImage.src = "../imagenes/mapas/Ariende/Ariende.jpg";
+  }
+}

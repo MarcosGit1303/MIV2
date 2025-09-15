@@ -37,7 +37,7 @@ const textosReinos = {
 
 
 /* ///////////////////////////////////////////////////////// */
-/* ===================JS PARA QUE REMPLACE=================== */
+/* ===================JS PARA QUE REMPLACE LOS PARRAFOS=================== */
 /* ///////////////////////////////////////////////////////// */
 // Función para poner bonito el nombre del reino
 function formatearTitulo(nombre) {
@@ -73,7 +73,7 @@ if (nombreReino && textosReinos[nombreReino]) {
 
 
 /* ///////////////////////////////////////////////////////// */
-/* ===================PRUEBA MAPA=================== */
+/* ===================MAPA=================== */
 /* ///////////////////////////////////////////////////////// */
 // Elemento de la imagen
 
@@ -86,7 +86,7 @@ function comprobarImagen(src, callback) {
 }
 
 if (nombreReino) {
-  const ruta = `../imagenes/mapas/${nombreReino}.jpg`;
+  const ruta = `../imagenes/mapas/${nombreReino}/${nombreReino}.jpg`;
   comprobarImagen(ruta, existe => {
     if (existe) {
       mapImage.src = ruta;
@@ -99,4 +99,27 @@ if (nombreReino) {
 } else {
   mapImage.src = `../imagenes/enproceso.png`;
   mapImage.alt = "Mapa genérico";
+}
+
+// ===================
+// Aplicar transform y cambiar mapa según zoom
+// ===================
+function updateTransform() {
+  const transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
+  mapImage.style.transform = transform;
+  pinLayer.style.transform = transform;
+
+  // Cambiar de mapa según zoom
+  if (scale > 1.8 && mapImage.src.includes("Reinos.png")) {
+    mapImage.src = "imagenes/mapas/Detalles.png";
+  }
+  if (scale < 1.8 && mapImage.src.includes("Detalles.png")) {
+    mapImage.src = "imagenes/mapas/Reinos.png";
+  }
+
+  if (scale > 1.8) {  
+    pinLayer.style.display = "block";   
+  } else {
+    pinLayer.style.display = "none";
+  }
 }
