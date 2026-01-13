@@ -16,6 +16,87 @@ body {
 }
 
 /* ///////////////////////////////////////////////////////// */
+/* =========================BODY========================= */
+/* ///////////////////////////////////////////////////////// */
+#container {
+  /* TAMAÑO */
+  height: 100%;
+  width: 100%;
+  /* FORMATO */
+  display: flex;
+  overflow: hidden;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  /* FONDO */
+  background-image: url("../imagenes/fondos/Mapa.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#article-container {
+    /* border: 2px solid green; */
+    display: flex;
+    height: 84vh;
+    width: 33vw;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#article {
+    border: 5px solid #853e00;
+    height: 26vh;
+    width: 10vw;
+    position: relative;
+    overflow: hidden;
+    background-image: none;
+    background-image: url("../imagenes/fondos/D&D.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* =========================EFECTO========================= */
+
+aside #article {
+    /* FORMA */
+    height: 6vh;
+    width: 6vw;
+    background-image: linear-gradient(to bottom right, rgb(103, 78, 13), rgb(42, 42, 42));
+    border-radius: 0.7rem;
+}
+
+#article::before,
+#article::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 43%;
+    height: 43%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%);
+    background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
+    transition: 0.2s;
+}
+
+#article:hover::before {
+    width: 80%;
+    height: 80%;
+    transition: 0.2s;
+}
+
+#article:hover::after {
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(200deg in hsl shorter hue, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+}
+
+
+/* ///////////////////////////////////////////////////////// */
 /* =========================PARRAFOS========================= */
 /* ///////////////////////////////////////////////////////// */
 p {

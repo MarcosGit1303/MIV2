@@ -8,6 +8,7 @@
   <link rel="icon" href="imagenes/fondos/D&DLOGO.png" type="image/png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mapa.css">
+  <link rel="stylesheet" href="css/pruebas.css">
 </head>
 
 <body>
@@ -20,39 +21,35 @@
         <li><a href="reinos/reinos.html?nombre=ariende">Ariende</a></li>
         <li><a href="reinos/reinos.html?nombre=cortam-aram">Cortam Aram</a></li>
         <li><a href="reinos/reinos.html?nombre=elion">Elion</a></li>
-        <li><a href="reinos/reinos.html?nombre=elian">Elion</a></li>
+        <li><a href="reinos/reinos.html?nombre=elian">Elian</a></li>
         <li><a href="reinos/reinos.html?nombre=ronte">Ronte</a></li>
       </ul>
     </nav>
   </aside>
 
   <!-- Contenedor principal -->
-  <div id="container">
-    <main id="mapa">
-      <img id="mapImage" src="imagenes/mapas/Reinos.png" alt="Mapa de los reinos de D&D">
-      <div id="pinLayer">
-        <a href="reinos/reinos.html?nombre=linothen" class="pin" data-title="Linothen" id="Linothen"></a>
-        <a href="reinos/reinos.html?nombre=ariende" class="pin" data-title="Ariende" id="Ariende"></a>
-        <a href="reinos/reinos.html?nombre=cortam-aram" class="pin" data-title="Cortam Aram" id="CortamAram"></a>
-        <!-- <a href="reinos/reinos.html?nombre=elion" class="pin" data-title="Elion" id="Elion"></a> -->
-        <a href="reinos/reinos.html?nombre=elian" class="pin" data-title="Elian" id="Elian"></a>
-        <a href="reinos/reinos.html?nombre=ronte" class="pin" data-title="Ronte" id="Ronte"></a>
-      </div>
-    </main>
-    <nav id="buttons">
-      <button id="cambiarMapa">Fronteras</button>
-    </nav>
-  </div>
-
-  <!-- Sidebar -->
-  <aside id="sidebar-R">
-    <div class="sidebar-tab">📜</div>
-    <ul>
-      <li><button onclick="window.location.href='reinos/info.html?nombre=orte'"> Historia Orte</button></li>
-      <li><button onclick="window.location.href='reinos/info.html?nombre=religion'"> Religion</button></li>
-      <li><button onclick="window.location.href='reinos/info.html?nombre=ciencia'"> Ciencia</button></li>
-    </ul>
-  </aside>
+  <container id="container">
+    <div id="mapa-container">
+      <main id="mapa">
+        <img id="mapImage" src="imagenes/mapas/Reinos.png" alt="Mapa de los reinos de D&D">
+        <div id="pinLayer">
+          <a href="reinos/reinos.html?nombre=linothen" class="pin" data-title="Linothen" id="Linothen"></a>
+          <a href="reinos/reinos.html?nombre=ariende" class="pin" data-title="Ariende" id="Ariende"></a>
+          <a href="reinos/reinos.html?nombre=cortam-aram" class="pin" data-title="Cortam Aram" id="CortamAram"></a>
+          <a href="reinos/reinos.html?nombre=elian" class="pin" data-title="Elian" id="Elian"></a>
+          <a href="reinos/reinos.html?nombre=ronte" class="pin" data-title="Ronte" id="Ronte"></a>
+        </div>
+      </main>
+      <nav id="buttons">
+        <button id="cambiarMapa">Fronteras</button>
+      </nav>
+    </div>
+    <div id="article-container">
+      <button id="article" onclick="window.location.href='reinos/info.html?nombre=orte'"> Historia Orte</button>
+      <button id="article" onclick="window.location.href='reinos/info.html?nombre=religion'"> Religion</button>
+      <button id="article" onclick="window.location.href='reinos/info.html?nombre=ciencia'"> Ciencia</button>
+    </div>
+  </container>
 
   <!-- Tooltip -->
   <div id="tooltip" role="tooltip"></div>

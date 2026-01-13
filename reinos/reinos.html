@@ -16,33 +16,34 @@
   <aside id="sidebar-L">
     <div class="sidebar-tab" aria-label="Abrir menú">📜</div>
     <ul>
-      <li><a href="../reinos/reino.html?nombre=linothen">Linothen</a></li>
-      <li><a href="../reinos/reino.html?nombre=ariende">Ariende</a></li>
-      <li><a href="../reinos/reino.html?nombre=cortam-aram">Cortam Aram</a></li>
-      <li><a href="../reinos/reino.html?nombre=elion">Elion</a></li>
-      <li><a href="../reinos/reino.html?nombre=ronte">Ronte</a></li>
+      <li><a href="../reinos/reinos.html?nombre=linothen">Linothen</a></li>
+      <li><a href="../reinos/reinos.html?nombre=ariende">Ariende</a></li>
+      <li><a href="../reinos/reinos.html?nombre=cortam-aram">Cortam Aram</a></li>
+      <li><a href="../reinos/reinos.html?nombre=elion">Elion</a></li>
+      <li><a href="../reinos/reinos.html?nombre=ronte">Ronte</a></li>
     </ul>
   </aside>
 
-  <div class="reino-container">
+  <container class="reino-container">
     <div id="contenido"></div>
     <div id="container-mapa">
-      <div id="mapa">
+      <main id="mapa">
         <img id="mapImage" alt="Mapa de mi mundo">
-        <div id="pinLayer">
-          <!-- <a href="../reinos/reino.html?nombre=linothen" class="pin" style="top: 32%; left: 70%;" title="Linothen"></a> -->
-        <img id="escudosOverlay" src="../imagenes/mapas/AriendeZoomEscudos.png" alt="Escudos" style="position:absolute; top:0; left:0; width:100%; opacity:0; pointer-events:none;">
-        <img id="nombresOverlay" src="../imagenes/mapas/AriendeZoomNombres.png" alt="Nombres" style="position:absolute; top:0; left:0; width:100%; opacity:0; pointer-events:none;">
+        <div id="pinLayer" style="display: none;">
+          <img id="escudosOverlay" src="../imagenes/mapas/Ariende/AriendeZoomEscudos.png" alt="Escudos"
+            style="position:absolute; top:0; left:0; width:100%; opacity:0; pointer-events:none;">
         </div>
-      </div>
+      </main>
+      <nav id="buttons">
+      <button onclick="window.location.href='../index.html'"> Atras</button>
+      </nav>
     </div>
-  </div>
+  </container>
 
   <aside id="sidebar-R">
     <div class="sidebar-tab">📜</div>
     <ul>
       <li><button id="btnEscudos">🛡️ Escudos</button></li>
-      <li><button id="toggleNombres">🏷️ Nombres</button></li>
     </ul>
   </aside>
 
