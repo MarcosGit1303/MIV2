@@ -117,9 +117,39 @@ function updateTransform() {
     mapImage.src = "imagenes/mapas/Reinos.png";
   }
 
-  if (scale > 1.8) {  
-    pinLayer.style.display = "block";   
+  if (scale > 1.8) {
+    pinLayer.style.display = "block";
   } else {
     pinLayer.style.display = "none";
   }
+}
+
+// ===================
+// Cambiar mapa según el zoom
+// ===================
+function actualizarMapa() {
+  mapImage.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
+  pinLayer.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
+  const ruta = `../imagenes/mapas/${nombreReino}/${nombreReino}.jpg`;
+  const rutaZoom = `../imagenes/mapas/${nombreReino}/${nombreReino}Zoom.jpg`;
+
+  if (nombreReino) {
+    const ruta = `../imagenes/mapas/${nombreReino}/${nombreReino}.jpg`;
+    comprobarImagen(ruta, existe => {
+      if (existe) {
+        // Cambiar imagen según el zoom
+        if (scale <= 1.8) {
+          mapImage.src = ruta;
+        } else {
+          mapImage.src = rutaZoom;
+        }
+      } else {
+        mapImage.src = `../imagenes/enproceso.png`;
+      }
+    });
+  } else {
+    mapImage.src = `../imagenes/enproceso.png`;
+    mapImage.alt = "Mapa genérico";
+  }
+
 }

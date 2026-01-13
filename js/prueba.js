@@ -48,18 +48,3 @@ window.addEventListener("mousemove", (e) => {
   posY = e.clientY - startY;
   actualizarMapa();
 });
-
-// ===================
-// Función que actualiza
-// ===================
-function actualizarMapa() {
-  mapImage.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
-  pinLayer.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
-
-  // Cambiar imagen según el zoom
-  if (scale >= 1.8) {
-    mapImage.src = "../imagenes/mapas/Ariende/AriendeZoom.jpg";
-  } else {
-    mapImage.src = "../imagenes/mapas/Ariende/Ariende.jpg";
-  }
-}
