@@ -29,7 +29,9 @@ body {
   align-items: center;
   flex-direction: row;
   /* FONDO */
-  background-image: url("../imagenes/fondos/Mapa.png");
+  /*background-image: url("../imagenes/fondos/Mapa.png");
+  background: linear-gradient(rgb(0, 0, 0), rgb(26, 1, 1), rgb(77, 65, 0));*/
+  background: #0c0404;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -46,32 +48,67 @@ body {
     flex-wrap: wrap;
 }
 
-#article {
+/* Nuevo: contenedor izquierdo con mismo comportamiento que #article-container */
+#article-container-left {
+    display: flex;
+    height: 84vh;
+    width: 33vw;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Ajustes: cuando las cards estén dentro del sidebar/aside o contenedores pequeños */
+#article-container-left .card {
+    /* FORMA adaptada para lista vertical compacta */
+    height: 10vh;
+    width: 14.5vw;
+    background-image: linear-gradient(to bottom right, rgb(103, 78, 13), rgb(42, 42, 42));
+    border-radius: 0.7rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+}
+
+
+/* ///////////////////////////////////////////////////////// */
+/* =========================CARDS=========================== */
+/* ///////////////////////////////////////////////////////// */
+.card {
     border: 5px solid #853e00;
-    height: 26vh;
-    width: 10vw;
+    height: 15vh;
+    width: 25vw;
     position: relative;
     overflow: hidden;
-    background-image: none;
     background-image: url("../imagenes/fondos/D&D.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    font-family: Times New Roman, serif;
+    font-size: 1.2vw;
+    box-sizing: border-box;
+    padding: 0.5rem;
 }
-
-
 /* =========================EFECTO========================= */
-
-aside #article {
+aside .card {
     /* FORMA */
     height: 6vh;
     width: 6vw;
     background-image: linear-gradient(to bottom right, rgb(103, 78, 13), rgb(42, 42, 42));
     border-radius: 0.7rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
-
-#article::before,
-#article::after {
+.card::before,
+.card::after {
     content: '';
     position: absolute;
     top: 0;
@@ -82,17 +119,32 @@ aside #article {
     background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
     transition: 0.2s;
 }
-
-#article:hover::before {
+.card:hover::before {
     width: 80%;
     height: 80%;
     transition: 0.2s;
 }
-
-#article:hover::after {
+.card:hover::after {
     width: 120%;
     height: 120%;
     background: linear-gradient(200deg in hsl shorter hue, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+}
+
+#pergamino, #religion, #ciencia {
+    background-size: 100%;
+    transition: background-size 0.2s ease;
+}
+#pergamino:hover, #religion:hover, #ciencia:hover {
+    background-size: 120%;
+}
+#pergamino {
+    background-image: url("../imagenes/fondos/Pergamino.png");
+}
+#religion {
+    background-image: url("../imagenes/fondos/Religion.png");
+}
+#ciencia {
+    background-image: url("../imagenes/fondos/Ciencia.png");
 }
 
 

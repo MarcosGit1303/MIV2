@@ -3,8 +3,8 @@
 /* ///////////////////////////////////////////////////////// */
 #mapa-container {
   display: flex;
-  height: 85%;
-  width: 59%;
+  height: 90%;
+  width: 90%;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -12,8 +12,8 @@
 
 #mapa {
   /* FORMA */
-  height: 85%;
-  width: 85%;
+  height: 100%;
+  width: 100%;
   border: 5px solid #853e00;
   border-radius: 20px;
   /* FORMATO */

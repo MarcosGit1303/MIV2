@@ -12,23 +12,18 @@
 </head>
 
 <body>
-  <!-- Sidebar -->
-  <aside id="sidebar-L">
-    <div class="sidebar-tab" aria-label="Abrir menú">📜</div>
-    <nav>
-      <ul>
-        <li><a href="reinos/reinos.html?nombre=linothen">Linothen</a></li>
-        <li><a href="reinos/reinos.html?nombre=ariende">Ariende</a></li>
-        <li><a href="reinos/reinos.html?nombre=cortam-aram">Cortam Aram</a></li>
-        <li><a href="reinos/reinos.html?nombre=elion">Elion</a></li>
-        <li><a href="reinos/reinos.html?nombre=elian">Elian</a></li>
-        <li><a href="reinos/reinos.html?nombre=ronte">Ronte</a></li>
-      </ul>
-    </nav>
-  </aside>
-
   <!-- Contenedor principal -->
-  <container id="container">
+  <div id="container">
+
+    <div id="article-container-left">
+      <a class="card" id="LinothenCard" href="reinos/reinos.html?nombre=linothen">Linothen</a>
+      <a class="card" id="AriendeCard" href="reinos/reinos.html?nombre=ariende">Ariende</a>
+      <a class="card" id="CortamAramCard" href="reinos/reinos.html?nombre=cortam-aram">Cortam Aram</a>
+      <a class="card" id="ElionCard" href="reinos/reinos.html?nombre=elion">Elion</a>
+      <a class="card" id="ElianCard" href="reinos/reinos.html?nombre=elian">Elian</a>
+      <a class="card" id="RonteCard" href="reinos/reinos.html?nombre=ronte">Ronte</a>
+    </div>
+
     <div id="mapa-container">
       <main id="mapa">
         <img id="mapImage" src="imagenes/mapas/Reinos.png" alt="Mapa de los reinos de D&D">
@@ -44,12 +39,13 @@
         <button id="cambiarMapa">Fronteras</button>
       </nav>
     </div>
+
     <div id="article-container">
-      <button id="article" onclick="window.location.href='reinos/info.html?nombre=orte'"> Historia Orte</button>
-      <button id="article" onclick="window.location.href='reinos/info.html?nombre=religion'"> Religion</button>
-      <button id="article" onclick="window.location.href='reinos/info.html?nombre=ciencia'"> Ciencia</button>
+      <a class="card" id="pergamino" href="reinos/info.html?nombre=orte">Historia Orte</a>
+      <a class="card" id="religion" href="reinos/info.html?nombre=religion">Religion</a>
+      <a class="card" id="ciencia" href="reinos/info.html?nombre=ciencia">Ciencia</a>
     </div>
-  </container>
+  </div>
 
   <!-- Tooltip -->
   <div id="tooltip" role="tooltip"></div>
