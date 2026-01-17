@@ -143,4 +143,59 @@ btn.addEventListener("click", () => {
   }
 });
 
+// ===================
+// Layout en píxeles (20% - 60% - 20%) y responsive
+// ===================
+function adjustLayout() {
+  const container = document.getElementById('container');
+  const left = document.getElementById('article-container-left');
+  const center = document.getElementById('mapa-container');
+  const right = document.getElementById('article-container-right');
 
+  if (!container || !left || !center || !right) return;
+
+  const containerWidth = container.clientWidth;
+
+  // breakpoint: si la pantalla es estrecha, usar layout apilado (handled por CSS media query)
+  if (window.innerWidth <= 900) {
+    left.style.width = '';
+    center.style.width = '';
+    right.style.width = '';
+    return;
+  }
+
+  const leftW = Math.floor(containerWidth * 0.2);
+  const centerW = Math.floor(containerWidth * 0.6);
+  const rightW = Math.max(0, containerWidth - leftW - centerW);
+
+  left.style.width = leftW + 'px';
+  center.style.width = centerW + 'px';
+  right.style.width = rightW + 'px';
+
+  // ajustar altura del mapa para que ocupe la mayor parte del contenedor si hace falta
+  const mapaEl = document.getElementById('mapa');
+  if (mapaEl) {
+    mapaEl.style.height = '84vh';
+  }
+}
+
+window.addEventListener('load', adjustLayout);
+window.addEventListener('resize', () => {
+  // debounce simple
+  clearTimeout(window._layoutResizeTimeout);
+  window._layoutResizeTimeout = setTimeout(adjustLayout, 80);
+});
+
+// ===================
+// Tooltip fallback: usar data-title primero
+// ===================
+document.querySelectorAll('.pin').forEach((pin) => {
+  pin.addEventListener('mouseenter', (e) => {
+    const text = pin.getAttribute('data-title') || pin.getAttribute('title') || '';
+    tooltip.textContent = text;
+    tooltip.style.display = text ? 'block' : 'none';
+    moveTooltip(e);
+  });
+  pin.addEventListener('mousemove', moveTooltip);
+  pin.addEventListener('mouseleave', hideTooltip);
+});

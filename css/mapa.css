@@ -4,9 +4,10 @@
 #mapa-container {
   display: flex;
   height: 90%;
-  width: 90%;
+  /* width will be asignado en px por JS (60% del contenedor) */
+  width: auto;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
@@ -14,6 +15,7 @@
   /* FORMA */
   height: 100%;
   width: 100%;
+  max-width: 1200px; /* evitar que crezca demasiado */
   border: 5px solid #853e00;
   border-radius: 20px;
   /* FORMATO */
@@ -139,4 +141,9 @@
   left: 80.5%;
   /* border-width: 9.5vh; */
   background-color: rgb(163, 180, 5);
+}
+
+@media (max-width: 900px) {
+  #mapa-container { width: 100% !important; height: 60vh; }
+  #mapa { height: 100%; width: 100%; max-width: none; }
 }
