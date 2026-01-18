@@ -19,59 +19,83 @@ body {
 /* =========================BODY========================= */
 /* ///////////////////////////////////////////////////////// */
 #container {
-  /* TAMAÑO */
-  height: 100%;
-  width: 100%;
-  /* FORMATO */
-  display: flex;
-  overflow: hidden;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: row;
-  /* FONDO */
-  background-image: url("../imagenes/fondos/Mapa.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    background: #0c0404;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 6vh;
 }
 
-#article-container {
-    /* border: 2px solid green; */
+/* Right column: previously #article-container */
+#article-container-right {
     display: flex;
     height: 84vh;
-    width: 33vw;
+    /* width will be calculada en px por JS (20% del contenedor) */
+    min-width: 200px;
+    max-width: 500px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
 
-#article {
-    border: 5px solid #853e00;
-    height: 26vh;
-    width: 10vw;
-    position: relative;
-    overflow: hidden;
-    background-image: none;
-    background-image: url("../imagenes/fondos/D&D.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+/* Nuevo: contenedor izquierdo con mismo comportamiento que #article-container */
+#article-container-left {
+    display: flex;
+    height: 71vh;
+    min-width: 200px;
+    max-width: 472px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Ajustes: cuando las cards estén dentro del sidebar/aside o contenedores pequeños */
+#article-container-left .card {
+    height: 10vh;
+    width: calc(100% - 30px);
+    font-size: 14px;
 }
 
 
+/* ///////////////////////////////////////////////////////// */
+/* =========================CARDS=========================== */
+/* ///////////////////////////////////////////////////////// */
+.card {
+    border: 5px solid #853e00;
+    height: 15vh;
+    max-width: 460px;
+    width: calc(100% - 30px);
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    font-family: Times New Roman, serif;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    flex-direction: column;
+}
 /* =========================EFECTO========================= */
-
-aside #article {
+aside .card {
     /* FORMA */
     height: 6vh;
     width: 6vw;
     background-image: linear-gradient(to bottom right, rgb(103, 78, 13), rgb(42, 42, 42));
     border-radius: 0.7rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
-
-#article::before,
-#article::after {
+.card::before,
+.card::after {
     content: '';
     position: absolute;
     top: 0;
@@ -82,19 +106,59 @@ aside #article {
     background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
     transition: 0.2s;
 }
-
-#article:hover::before {
+.card:hover::before {
     width: 80%;
     height: 80%;
     transition: 0.2s;
 }
-
-#article:hover::after {
+.card:hover::after {
     width: 120%;
     height: 120%;
     background: linear-gradient(200deg in hsl shorter hue, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
 }
 
+#pergamino, #religion, #ciencia {
+    background-size: 100%;
+    transition: background-size 0.2s ease;
+}
+#pergamino:hover, #religion:hover, #ciencia:hover {
+    background-size: 120%;
+}
+#pergamino {
+    background-image: url("../imagenes/fondos/Pergamino.png");
+}
+#religion {
+    background-image: url("../imagenes/fondos/Religion.png");
+}
+#ciencia {
+    background-image: url("../imagenes/fondos/Ciencia.png");
+}
+
+#LinothenCard, #AriendeCard, #CortanAramCard, #ElionCard, #ElianCard, #RonteCard {
+    background-size: 100%;
+    transition: background-size 0.2s ease;
+}
+#LinothenCard:hover, #AriendeCard:hover, #CortanAramCard:hover, #ElionCard:hover, #ElianCard:hover, #RonteCard:hover {
+    background-size: 120%;
+}
+#LinothenCard {
+    background-image: url("../imagenes/territorios/Linothen.png");
+}
+#AriendeCard {
+    background-image: url("../imagenes/territorios/Ariende.png");
+}
+#CortanAramCard {
+    background-image: url("../imagenes/territorios/Cortan Aram.png");
+}
+#ElionCard {
+    background-image: url("../imagenes/territorios/Elion.png");
+}
+#ElianCard {
+    background-image: url("../imagenes/territorios/Elian.png");
+}
+#RonteCard{
+    background-image: url("../imagenes/territorios/Ronte.png");
+}
 
 /* ///////////////////////////////////////////////////////// */
 /* =========================PARRAFOS========================= */
@@ -116,15 +180,20 @@ li {
 }
 
 h1 {
-  /* formato */
   font-size: 2vw;
   font-family: 'DragonHunter', sans-serif;
 }
 
 h2 {
-  /* formato */
-  font-size: 1.9vw;
+  font-size: 5vh;
   font-family: 'Pristina', sans-serif;
+  margin: 0;
+}
+
+h3{
+  font-size: 1.6vw;
+  font-family: 'Pristina', sans-serif;
+  margin: 0;
 }
 
 /* ///////////////////////////////////////////////////////// */
@@ -309,4 +378,29 @@ button:hover::after {
   border-radius: 5px;
   pointer-events: none;
   z-index: 1000;
+}
+
+/* Responsive: para pantallas estrechas apilar en columna y usar anchos relativos */
+@media (max-width: 900px) {
+  #container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  #article-container-left,
+  #article-container-right,
+  #mapa-container {
+    width: calc(100% - 40px) !important;
+    min-width: auto;
+    max-width: none;
+    height: auto;
+  }
+
+  #mapa {
+    width: 100%;
+    height: 60vh;
+  }
+
+  .card { width: 100%; max-width: none; }
 }

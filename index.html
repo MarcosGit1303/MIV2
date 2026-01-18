@@ -12,45 +12,59 @@
 </head>
 
 <body>
-  <!-- Sidebar -->
-  <aside id="sidebar-L">
-    <div class="sidebar-tab" aria-label="Abrir menú">📜</div>
-    <nav>
-      <ul>
-        <li><a href="reinos/reinos.html?nombre=linothen">Linothen</a></li>
-        <li><a href="reinos/reinos.html?nombre=ariende">Ariende</a></li>
-        <li><a href="reinos/reinos.html?nombre=cortam-aram">Cortam Aram</a></li>
-        <li><a href="reinos/reinos.html?nombre=elion">Elion</a></li>
-        <li><a href="reinos/reinos.html?nombre=elian">Elian</a></li>
-        <li><a href="reinos/reinos.html?nombre=ronte">Ronte</a></li>
-      </ul>
-    </nav>
-  </aside>
-
   <!-- Contenedor principal -->
-  <container id="container">
+  <div id="container">
+
+    <div id="article-container-left">
+      <a class="card" id="LinothenCard" href="extras/reinos.html?nombre=linothen">
+        <h3>Linothen</h3>
+        <p>Reino central</p>
+      </a>
+      <a class="card" id="AriendeCard" href="extras/reinos.html?nombre=ariende">
+        <h3>Ariende</h3>
+        <p>Reino del hierro</p>
+      </a>
+      <a class="card" id="CortanAramCard" href="extras/reinos.html?nombre=cortam-aram">
+        <h3>Cortan Aram</h3>
+        <p>Reino del sol</p>
+      </a>
+      <a class="card" id="ElionCard" href="extras/reinos.html?nombre=elion">
+        <h3>Elion</h3>
+        <p>Reino del cristal</p>
+      </a>
+      <a class="card" id="ElianCard" href="extras/reinos.html?nombre=elian">
+        <h3>Elian</h3>
+        <p>Reino del arbol</p>
+      </a>
+      <a class="card" id="RonteCard" href="extras/reinos.html?nombre=ronte">
+        <h3>Ronte</h3>
+        <p>Reino de la piedra</p>
+      </a>
+    </div>
+
     <div id="mapa-container">
       <main id="mapa">
         <img id="mapImage" src="imagenes/mapas/Reinos.png" alt="Mapa de los reinos de D&D">
         <div id="pinLayer">
-          <a href="reinos/reinos.html?nombre=linothen" class="pin" data-title="Linothen" id="Linothen"></a>
-          <a href="reinos/reinos.html?nombre=ariende" class="pin" data-title="Ariende" id="Ariende"></a>
-          <a href="reinos/reinos.html?nombre=cortam-aram" class="pin" data-title="Cortam Aram" id="CortamAram"></a>
-          <a href="reinos/reinos.html?nombre=elian" class="pin" data-title="Elian" id="Elian"></a>
-          <a href="reinos/reinos.html?nombre=ronte" class="pin" data-title="Ronte" id="Ronte"></a>
+          <a href="extras/reinos.html?nombre=linothen" class="pin" data-title="Linothen" id="Linothen"></a>
+          <a href="extras/reinos.html?nombre=ariende" class="pin" data-title="Ariende" id="Ariende"></a>
+          <a href="extras/reinos.html?nombre=cortam-aram" class="pin" data-title="Cortam Aram" id="CortamAram"></a>
+          <a href="extras/reinos.html?nombre=elian" class="pin" data-title="Elian" id="Elian"></a>
+          <a href="extras/reinos.html?nombre=ronte" class="pin" data-title="Ronte" id="Ronte"></a>
         </div>
       </main>
       <nav id="buttons">
         <button id="cambiarMapa">Fronteras</button>
       </nav>
     </div>
-    <div id="article-container">
-      <button id="article" onclick="window.location.href='reinos/info.html?nombre=orte'"> Historia Orte</button>
-      <button id="article" onclick="window.location.href='reinos/info.html?nombre=religion'"> Religion</button>
-      <button id="article" onclick="window.location.href='reinos/info.html?nombre=ciencia'"> Ciencia</button>
-    </div>
-  </container>
 
+    <div id="article-container-right">
+      <a class="card" id="pergamino" href="extras/info.html?nombre=ortte"><h3>Historia Ortte</h3></a>
+      <a class="card" id="religion" href="extras/info.html?nombre=religion"><h3>Religion</h3></a>
+      <a class="card" id="ciencia" href="extras/info.html?nombre=ciencia"><h3>Ciencia</h3></a>
+    </div>
+
+  </div>
   <!-- Tooltip -->
   <div id="tooltip" role="tooltip"></div>
 

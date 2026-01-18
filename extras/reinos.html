@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Reino</title>
+  <link rel="icon" href="../imagenes/fondos/D&DLOGO.png" type="image/png">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/mapa.css">
+  <link rel="stylesheet" href="../css/reino.css">
+</head>
+
+<body>
+  <container class="reino-container">
+    <div id="contenido"></div>
+    <div id="container-mapa">
+      <main id="mapa">
+        <img id="mapImage" alt="Mapa de mi mundo">
+        <div id="pinLayer" style="display: none;">
+          <img id="escudosOverlay" src="../imagenes/mapas/Ariende/AriendeZoomEscudos.png" alt="Escudos"
+            style="position:absolute; top:0; left:0; width:100%; opacity:0; pointer-events:none;">
+        </div>
+      </main>
+      <nav id="buttons">
+        <button onclick="window.location.href='../index.html'"> Atras</button>
+      </nav>
+    </div>
+  </container>
+
+  <!--  <aside id="sidebar-R">
+    <div class="sidebar-tab">📜</div>
+    <ul>
+      <li><button id="btnEscudos">🛡️ Escudos</button></li>
+    </ul>
+  </aside>-->
+
+  <script src="../js/script.js"></script>
+  <script src="../js/reino.js"></script>
+  <script src="../js/prueba.js"></script>
+</body>
+
+</html>
