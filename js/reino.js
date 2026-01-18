@@ -75,9 +75,6 @@ if (nombreReino && textosReinos[nombreReino]) {
 /* ///////////////////////////////////////////////////////// */
 /* ===================MAPA=================== */
 /* ///////////////////////////////////////////////////////// */
-// Elemento de la imagen
-
-// Función para comprobar si existe la imagen
 function comprobarImagen(src, callback) {
   const img = new Image();
   img.onload = () => callback(true);

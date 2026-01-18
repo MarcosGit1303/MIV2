@@ -180,15 +180,14 @@ li {
 }
 
 h1 {
-  /* formato */
   font-size: 2vw;
   font-family: 'DragonHunter', sans-serif;
 }
 
 h2 {
-  /* formato */
-  font-size: 2vh;
+  font-size: 5vh;
   font-family: 'Pristina', sans-serif;
+  margin: 0;
 }
 
 h3{
